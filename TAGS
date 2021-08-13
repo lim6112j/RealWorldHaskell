@@ -1,0 +1,48 @@
+
+./Setup.hs,15
+main main1,2
+
+./app/Main.hs,37
+module Main Main0,1
+main main4,5
+
+./test/Spec.hs,15
+main main0,1
+
+./src/ch04/InteractWith.hs,86
+module InteractWith InteractWith2,3
+interactWith interactWith5,6
+main main10,11
+
+./src/Lib.hs,42
+module LibLib0,1
+someFunc someFunc4,5
+
+./src/myDrop.hs,19
+myDrop myDrop0,1
+
+./src/add.hs,13
+add add0,1
+
+./src/ch05/SimpleJson.hs,441
+module SimpleJsonSimpleJson2,3
+data JValue JValue13,14
+data JValue = JString JString13,14
+            | JNumber JNumber14,15
+            | JBool JBool15,16
+            | JNullJNull16,17
+            | JObject JObject17,18
+            | JArray JArray18,19
+getString getString20,21
+getInt getInt22,23
+getDouble getDouble24,25
+getBool getBool26,27
+getObject getObject28,29
+getArray getArray30,31
+isNull isNull32,33
+
+./src/BookStore.hs,114
+data Book Book0,1
+data Book = Book Book0,1
+data Magazine Magazine1,2
+data Magazine = Magazine Magazine1,2
