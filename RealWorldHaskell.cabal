@@ -27,16 +27,25 @@ library
   exposed-modules:
       BookStore
       Lib
-      DataEither
-      JSONClass
-      SimpleArrow
+      Concat
+      Prettify
+      PrettyJSON
+      PrettyStub
+      PutJSON
+      SimpleJSON
+      Parse
+      PNM
   other-modules:
       Paths_RealWorldHaskell
   hs-source-dirs:
       src
-      src/ch06
+      src/ch05
+      src/ch10
   build-depends:
-      base >=4.7 && <5
+      QuickCheck
+    , base >=4.7 && <5
+    , bytestring
+    , random
   default-language: Haskell2010
 
 executable RealWorldHaskell-exe
@@ -47,8 +56,11 @@ executable RealWorldHaskell-exe
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      RealWorldHaskell
+      QuickCheck
+    , RealWorldHaskell
     , base >=4.7 && <5
+    , bytestring
+    , random
   default-language: Haskell2010
 
 test-suite RealWorldHaskell-test
@@ -60,6 +72,9 @@ test-suite RealWorldHaskell-test
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      RealWorldHaskell
+      QuickCheck
+    , RealWorldHaskell
     , base >=4.7 && <5
+    , bytestring
+    , random
   default-language: Haskell2010

@@ -21,13 +21,18 @@ description:         Please see the README on GitHub at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
-
+- QuickCheck
+- random
+- bytestring
 library:
   source-dirs:
     - src
     # - src/ch04
-    # - src/ch05
-    - src/ch06
+    - src/ch05
+    # - src/ch06
+    # - src/ch07
+    # - src/ch11
+    - src/ch10
 executables:
   RealWorldHaskell-exe:
     main:                Main.hs
