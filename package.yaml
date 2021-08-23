@@ -24,15 +24,18 @@ dependencies:
 - QuickCheck
 - random
 - bytestring
+- directory
+- filepath
 library:
   source-dirs:
     - src
     # - src/ch04
-    - src/ch05
+    # - src/ch05
     # - src/ch06
     # - src/ch07
     # - src/ch11
-    - src/ch10
+    # - src/ch10
+    - src/ch18
 executables:
   RealWorldHaskell-exe:
     main:                Main.hs

@@ -11,6 +11,7 @@ import Lib
 -- import BasicIO
 -- import QCBasic
 import Prelude hiding ((<>))
-import PNM
+-- import PNM
+import CountEntries
 main :: IO ()
 main = putStrLn "hello world"
