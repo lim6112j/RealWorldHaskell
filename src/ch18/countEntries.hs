@@ -1,19 +1,17 @@
--- |
 
 module CountEntries where
-import System.Directory (doesDirectoryExist, getDirectoryContents)
+-- import CountEntry ( listDirectory )
+import System.Directory (listDirectory, doesDirectoryExist)
 import System.FilePath ((</>))
-import Control.Monad (forM, liftM)
-listDirectory :: FilePath -> IO [String]
-listDirectory = fmap (filter notDots) . getDirectoryContents
-  where notDots p = p /= "." && p /= ".."
-countEtriesTrad :: FilePath -> IO [(FilePath, Int)]
-countEtriesTrad path = do
-  contents <- listDirectory path
-  rest <- forM contents $ \name -> do
+import Control.Monad (forM_, when)
+import Control.Monad.Trans (liftIO)
+import Control.Monad.Writer (WriterT, tell, runWriterT)
+
+countEntries :: FilePath -> WriterT [(FilePath, Int)] IO ()
+countEntries path = do
+  contents <- liftIO . listDirectory $ path
+  tell [(path, length contents)]
+  forM_ contents $ \name -> do
     let newName = path </> name
-    isDir <- doesDirectoryExist newName
-    if isDir
-      then countEtriesTrad newName
-      else return []
-  return $ (path, length contents) : concat rest
+    isDir <- liftIO . doesDirectoryExist $ newName
+    when isDir $ countEntries newName

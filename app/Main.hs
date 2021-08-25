@@ -1,6 +1,6 @@
 module Main where
-import Test.QuickCheck
-import Lib
+-- import Test.QuickCheck
+-- import Lib
 -- import PrettyJSON
 -- import Prettify
 -- import NaiveEq
@@ -13,5 +13,9 @@ import Lib
 import Prelude hiding ((<>))
 -- import PNM
 import CountEntries
+import Control.Monad.Writer (WriterT, tell, execWriterT)
+
 main :: IO ()
-main = putStrLn "hello world"
+main = do
+  a <- execWriterT $ countEntries "."
+  putStrLn $ show a
