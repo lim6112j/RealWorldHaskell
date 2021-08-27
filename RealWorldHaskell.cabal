@@ -29,6 +29,9 @@ library
       Lib
       CountEntries
       CountEntry
+      LocalReader
+      Reader
+      UglyStack
   other-modules:
       Paths_RealWorldHaskell
   hs-source-dirs:

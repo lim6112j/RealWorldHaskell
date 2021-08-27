@@ -12,10 +12,17 @@ module Main where
 -- import QCBasic
 import Prelude hiding ((<>))
 -- import PNM
-import CountEntries
+-- import CountEntries
+-- import LocalReader
 import Control.Monad.Writer (WriterT, tell, execWriterT)
+import Control.Monad.Reader
+import UglyStack
 
 main :: IO ()
 main = do
-  a <- execWriterT $ countEntries "."
-  putStrLn $ show a
+  -- a <- execWriterT $ countEntries "."
+  -- putStrLn $ show a
+  -- let (a, b, c) = runReader localExample "hello"
+  -- print (a, b, c)
+  (v, s) <- runApp (constrainedCount 0 ".") 3
+  mapM_ print v
