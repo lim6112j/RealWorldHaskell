@@ -24,5 +24,5 @@ main = do
   -- putStrLn $ show a
   -- let (a, b, c) = runReader localExample "hello"
   -- print (a, b, c)
-  (v, s) <- runApp (constrainedCount 0 ".") 3
+  (v, s) <- runMyApp (constrainedCount 0 ".") 3
   mapM_ print v
