@@ -14,15 +14,17 @@ import Prelude hiding ((<>))
 -- import PNM
 -- import CountEntries
 -- import LocalReader
-import Control.Monad.Writer (WriterT, tell, execWriterT)
-import Control.Monad.Reader
-import UglyStack
+-- import Control.Monad.Writer (WriterT, tell, execWriterT)
+-- import Control.Monad.Reader
+-- import UglyStack
+import BasicIO
 
 main :: IO ()
 main = do
+  run
   -- a <- execWriterT $ countEntries "."
   -- putStrLn $ show a
   -- let (a, b, c) = runReader localExample "hello"
   -- print (a, b, c)
-  (v, s) <- runMyApp (constrainedCount 0 ".") 3
-  mapM_ print v
+  -- (v, s) <- runMyApp (constrainedCount 0 ".") 3
+  -- mapM_ print v

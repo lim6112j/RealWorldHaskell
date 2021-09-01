@@ -34,10 +34,10 @@ library:
     # - src/ch04
     # - src/ch05
     # - src/ch06
-    # - src/ch07
+    - src/ch07
     # - src/ch11
-    - src/ch18
-
+    # - src/ch18
+    # - src/ch15
 executables:
   RealWorldHaskell-exe:
     main:                Main.hs

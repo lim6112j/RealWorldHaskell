@@ -27,17 +27,13 @@ library
   exposed-modules:
       BookStore
       Lib
-      CountEntries
-      CountEntry
-      LocalReader
-      Reader
-      StackStack
-      UglyStack
+      Actions2
+      BasicIO
   other-modules:
       Paths_RealWorldHaskell
   hs-source-dirs:
       src
-      src/ch18
+      src/ch07
   build-depends:
       QuickCheck
     , base >=4.7 && <5
