@@ -27,6 +27,7 @@ library
   exposed-modules:
       BookStore
       Lib
+      Actions
       Actions2
       BasicIO
   other-modules:
