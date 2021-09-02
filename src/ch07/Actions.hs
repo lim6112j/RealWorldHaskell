@@ -19,3 +19,6 @@ runall [] = return ()
 runall (firstelem:remainelems) = do
   firstelem
   runall remainelems
+-- main = do str2action "Program start"
+          -- printitall
+          -- str2action "Done!"

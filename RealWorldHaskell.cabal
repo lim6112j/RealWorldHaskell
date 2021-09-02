@@ -30,6 +30,8 @@ library
       Actions
       Actions2
       BasicIO
+      BasicIONoDo
+      Return1
   other-modules:
       Paths_RealWorldHaskell
   hs-source-dirs:
