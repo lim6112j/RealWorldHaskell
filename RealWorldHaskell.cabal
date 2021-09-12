@@ -27,20 +27,20 @@ library
   exposed-modules:
       BookStore
       Lib
-      Actions
-      Actions2
-      BasicIO
-      BasicIONoDo
-      Return1
+      Parse
+      Pnm
+      TreeMap
   other-modules:
       Paths_RealWorldHaskell
   hs-source-dirs:
       src
-      src/ch07
+      src/ch10
   build-depends:
       QuickCheck
+    , array
     , base >=4.7 && <5
     , bytestring
+    , containers
     , directory
     , filepath
     , mtl
@@ -57,8 +57,10 @@ executable RealWorldHaskell-exe
   build-depends:
       QuickCheck
     , RealWorldHaskell
+    , array
     , base >=4.7 && <5
     , bytestring
+    , containers
     , directory
     , filepath
     , mtl
@@ -76,8 +78,10 @@ test-suite RealWorldHaskell-test
   build-depends:
       QuickCheck
     , RealWorldHaskell
+    , array
     , base >=4.7 && <5
     , bytestring
+    , containers
     , directory
     , filepath
     , mtl

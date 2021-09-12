@@ -17,10 +17,12 @@ import Prelude hiding ((<>))
 -- import Control.Monad.Writer (WriterT, tell, execWriterT)
 -- import Control.Monad.Reader
 -- import UglyStack
-import Return1
+-- import Return1
 -- import Actions2
+-- import Barcode
+import Parse
 main :: IO ()
-main = isGreen
+main = putStrLn "hello world" 
   -- a <- execWriterT $ countEntries "."
   -- putStrLn $ show a
   -- let (a, b, c) = runReader localExample "hello"

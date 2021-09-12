@@ -27,6 +27,8 @@ dependencies:
 - directory
 - filepath
 - mtl
+- containers
+- array
 
 library:
   source-dirs:
@@ -34,8 +36,8 @@ library:
     # - src/ch04
     # - src/ch05
     # - src/ch06
-    - src/ch07
-    # - src/ch11
+    # - src/ch12
+    - src/ch10
     # - src/ch18
     # - src/ch15
 executables:
