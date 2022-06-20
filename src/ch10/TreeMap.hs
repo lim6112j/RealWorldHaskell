@@ -6,7 +6,6 @@ treeLengths (Leaf s) = Leaf (length s)
 treeLengths (Node l r) = Node (treeLengths l) (treeLengths r)
 treeMap :: (a -> b) -> Tree a -> Tree b
 treeMap f (Leaf a) = Leaf (f a)
-treemap f (Node l r) = Node (treeMap f l) (treeMap f r)
-
+treeMap f (Node l r) = Node (treeMap f l) (treeMap f r)
 instance Functor Tree where
   fmap = treeMap

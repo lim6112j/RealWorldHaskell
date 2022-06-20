@@ -37,9 +37,9 @@ library:
     # - src/ch05
     # - src/ch06
     # - src/ch12
-    - src/ch10
+    # - src/ch10
     # - src/ch18
-    # - src/ch15
+    - src/ch15
 executables:
   RealWorldHaskell-exe:
     main:                Main.hs

@@ -27,14 +27,12 @@ library
   exposed-modules:
       BookStore
       Lib
-      Parse
-      Pnm
-      TreeMap
+      MovieReview
   other-modules:
       Paths_RealWorldHaskell
   hs-source-dirs:
       src
-      src/ch10
+      src/ch15
   build-depends:
       QuickCheck
     , array

@@ -1,4 +1,5 @@
 module Main where
+
 -- import Test.QuickCheck
 -- import Lib
 -- import PrettyJSON
@@ -10,7 +11,7 @@ module Main where
 -- import Actions2
 -- import BasicIO
 -- import QCBasic
-import Prelude hiding ((<>))
+-- import Prelude hiding ((<>))
 -- import PNM
 -- import CountEntries
 -- import LocalReader
@@ -20,12 +21,23 @@ import Prelude hiding ((<>))
 -- import Return1
 -- import Actions2
 -- import Barcode
-import Parse
+-- import TreeMap
+-- import Parse
+import MovieReview
+
+--printMovie movieReview = case movieReview of
+--Just a -> print a
+--Nothing -> putStrLn ("no movie review")
+
+printMovie movieReview = return movieReview >>= print
+
 main :: IO ()
-main = putStrLn "hello world" 
-  -- a <- execWriterT $ countEntries "."
-  -- putStrLn $ show a
-  -- let (a, b, c) = runReader localExample "hello"
-  -- print (a, b, c)
-  -- (v, s) <- runMyApp (constrainedCount 0 ".") 3
-  -- mapM_ print v
+main = do
+  printMovie $ apReview [("title", "move1"), ("user", "ben"), ("review", "5 star")]
+
+-- a <- execWriterT $ countEntries "."
+-- putStrLn $ show a
+-- let (a, b, c) = runReader localExample "hello"
+-- print (a, b, c)
+-- (v, s) <- runMyApp (constrainedCount 0 ".") 3
+-- mapM_ print v
