@@ -23,7 +23,7 @@ module Main where
 -- import Barcode
 -- import TreeMap
 -- import Parse
-import MovieReview
+-- import MovieReview
 
 --printMovie movieReview = case movieReview of
 --Just a -> print a
@@ -32,8 +32,9 @@ import MovieReview
 printMovie movieReview = return movieReview >>= print
 
 main :: IO ()
-main = do
-  printMovie $ apReview [("title", "move1"), ("user", "ben"), ("review", "5 star")]
+main = do putStrLn "hello"
+
+--printMovie $ apReview [("title", "move1"), ("user", "ben"), ("review", "5 star")]
 
 -- a <- execWriterT $ countEntries "."
 -- putStrLn $ show a

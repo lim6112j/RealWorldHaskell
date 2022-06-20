@@ -29,6 +29,7 @@ dependencies:
 - mtl
 - containers
 - array
+- parsec
 
 library:
   source-dirs:
@@ -39,7 +40,8 @@ library:
     # - src/ch12
     # - src/ch10
     # - src/ch18
-    - src/ch15
+    # - src/ch15
+    - src/ch16
 executables:
   RealWorldHaskell-exe:
     main:                Main.hs

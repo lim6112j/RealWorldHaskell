@@ -27,12 +27,11 @@ library
   exposed-modules:
       BookStore
       Lib
-      MovieReview
   other-modules:
       Paths_RealWorldHaskell
   hs-source-dirs:
       src
-      src/ch15
+      src/ch16
   build-depends:
       QuickCheck
     , array
@@ -42,6 +41,7 @@ library
     , directory
     , filepath
     , mtl
+    , parsec
     , random
   default-language: Haskell2010
 
@@ -62,6 +62,7 @@ executable RealWorldHaskell-exe
     , directory
     , filepath
     , mtl
+    , parsec
     , random
   default-language: Haskell2010
 
@@ -83,5 +84,6 @@ test-suite RealWorldHaskell-test
     , directory
     , filepath
     , mtl
+    , parsec
     , random
   default-language: Haskell2010
